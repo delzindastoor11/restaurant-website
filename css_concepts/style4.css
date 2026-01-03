@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.primary-box{
+	background: #222;
+	color: #eee;
+	font-size: 24px;
+	padding: 20px;
+}
+.secondary-box{
+	background: #456ff6;
+	color: #eee;
+	font-size: 24px;
+	padding: 10px;
+}
+
+/* DESCENDANT SELECTOR*/
+.primary-box h2
+{
+	font-family: helvetica;
+}
+
+.primary-box p em /* specifying the tag within the p tag */
+{
+	color: skyblue;
+}
+.secondary-box p
+{
+	font-family: arial;
+}
+.secondary-box p em /* specifying the tag within the p tag */
+{
+	color: greenyellow;
+}
+
+/*grouping selectors*/
+.inside-box h3{
+	font-size: 5px;
+}
+.inside-box p{
+	font-size: 5px;
+}
+
+/* instead*/
+.inside-box h3, .inside-box p
+{
+	font-size: 20px;
+	color: goldenrod;
+}

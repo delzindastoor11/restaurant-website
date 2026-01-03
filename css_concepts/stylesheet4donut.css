@@ -1,0 +1,1110 @@
+/* ===============================
+   Author: DELZIN RAYOMAND DASTOOR
+   Date:  17-02-2025
+   
+   Colour Palette:
+   ---------------
+   Light Cream:		#f2f3ee
+   Orange:			#d17f38
+   Yellow:			#e8c04f
+   Brown:			#4b2707
+   =============================== */
+
+/* General */
+body
+{
+   background: #f2f3ee url('images/bg-title.gif') top left repeat;
+   color: #4b2707;
+   font-size: 14px;
+   font-family: cursive ;
+   -webkit-font-smoothing:antialiased;
+   text-rendering: optimizeLegibility;
+}
+.container
+{
+   width: 924px;
+   margin: 0 auto;
+   padding: 30px 24px;
+}
+
+
+/* Typography */
+h1, h2
+{
+   color: #d17f38;
+   font-size: 40px;
+   font-weight: normal;
+   line-height: 44px;
+   margin: 0;
+   font-family: fantasy;
+
+}
+h1
+{
+   text-align: center;
+   padding: 0 0 20px;
+   background: url('images/header-divider.png') bottom center no-repeat;
+}
+h1 em
+{
+  font-style: italic;
+  color: #4b2707;
+}
+h2
+{
+   font-size: 34px;
+}
+h3
+{
+   margin: 0;
+}
+
+p .lead
+{
+   font-size: 30px;
+   font-weight: 300;
+   margin: 10px 0;
+}
+p{
+   margin: 0;
+}
+a:link
+{
+color: #d17f38;
+}
+a:visited
+{
+   color: #d17f38;
+}
+a:hover
+{
+   color: #4b2787;
+}
+hr
+{
+   border: none;
+   height: 33px;
+   width: 333px;
+   margin: 30px auto;
+   background: url('images/divider.png') center center no-repeat;
+}
+
+/* Header */
+header nav
+{
+   text-align: center;
+}
+header nav ul{
+   margin: 0;
+   padding: 0;
+   list-style: none; /* removes bullets from ul */
+   display: block;
+   line-height: 141px;
+}
+header nav ul li{
+   display: inline-block;
+   padding: 0 20px;
+}
+header nav ul li a{
+   text-transform: uppercase;
+   text-decoration: none;
+   font-weight: bold;
+}
+header nav ul li a:hover
+{
+   color: #4b2707;
+   padding-top: 20px;
+   background: url('images/tiny-donut.png') top center no-repeat;
+}
+header nav ul li#logo a{
+   display: block;
+   width:292px ;
+   height: 141px;
+   background: url('images/logo.png') center center no-repeat;
+   text-indent: -99999px;
+}
+header nav ul li#logo a:hover
+{
+   padding:0;
+   background: url('images/logo-hover.png') center center no-repeat;
+}
+
+/* Hero */
+#hero
+{
+   background: #e8c04f url('images/bg-title-yellow.gif') top left repeat ;
+}
+
+#hero .container
+{
+   position: relative;
+}
+
+#hero .large-ribbon
+{
+   height: 190px;
+   width: 150px;
+   background: url('images/fresh-whole-ingredients.png') top left no-repeat;
+   text-indent: -9999px;
+   position: absolute;
+   top: -23px;
+   right: -30px;
+}
+/* The Whole Story */
+#story-excerpt
+{
+   width: 530px;
+   margin-right:24px ;
+   float: left;
+   font-size: 16px;
+}
+#best-donut
+{
+   background: url('images/award.png') left center no-repeat;
+   padding: 30px 0 30px 130px;
+   float: left;
+   width: 240px;
+}
+
+
+/* News & Events */
+#article
+{
+   width: 370px;
+   float: left;
+   margin-right: 24px;
+}
+#feature-image
+{
+   width: 530px;
+   float: left;
+}
+#news-events article
+{
+   margin: 20px 0;
+   padding-left: 55px;
+}
+#news-events article.news
+{
+   background: url('images/icon-news.png') top left no-repeat;
+}
+#news-events article.event
+{
+   background: url('images/icon-calendar.png') top left no-repeat;
+}
+#news-events header time{
+  color: #d17f38; 
+  font-size: 12px;
+}
+#news-events section.excerpt
+{
+   margin: 10px 0;
+}
+#news-events footer
+{
+   font-size: 12px;
+}
+
+/* Footer */
+footer.main
+{
+   background: #4b2707 url('bg-title-brown.gif') top left repeat;
+   color: #f2f3ee;
+   padding: 30px 0;
+}
+
+footer .main a:hover
+{
+   color: #2512a2;
+}
+#uncopyright, #credits
+{
+   width: 240px;
+   float: left;
+  padding: 10px 0 10px 50px;
+}
+#uncopyright
+{
+   background: url('images/icon-recycle.png') center left no-repeat;
+}
+#credits{
+   background: url('images/icon-apple.png') center left no-repeat;
+   float: right;
+   margin-top: 9px ;
+}
+/* Force Elements to Self Clear its Children: http://css-tricks.com/snippets/css/clear-fix/ */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	}
+/* General Enhancements */
+body {
+   background: #f2f3ee url('images/bg-title.gif') top left repeat;
+   color: #4b2707;
+   font-size: 14px;
+   font-family: cursive;
+   -webkit-font-smoothing: antialiased;
+   text-rendering: optimizeLegibility;
+}
+
+.container {
+   width: 924px;
+   margin: 0 auto;
+   padding: 30px 24px;
+}
+
+/* Hero Section */
+#hero-location {
+   background: #e8c04f url('images/bg-location.jpg') center center no-repeat;
+   background-size: cover; /* Ensure the background image covers the section */
+   text-align: center;
+   padding: 60px 20px;
+   color: #4b2707;
+}
+
+#hero-location h1 {
+   font-size: 2.5rem; /* Larger font size for the title */
+   margin-bottom: 20px;
+}
+
+#hero-location .hero-text {
+   font-size: 1.2rem;
+   line-height: 1.6;
+}
+
+/* Location Info Section */
+#location-info {
+   padding: 40px 20px;
+   background-color: #f2f3ee; /* Light cream background for contrast */
+   border-radius: 10px; /* Rounded corners for a modern look */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#location-info h2 {
+   font-size: 2rem;
+   color: #d17f38; /* Orange color for headings */
+   margin-bottom: 20px;
+}
+
+#location-info p {
+   font-size: 1rem;
+   margin-bottom: 15px;
+}
+
+#map iframe {
+   border-radius: 10px; /* Rounded corners for the map */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Testimonials Section */
+#testimonials {
+   padding: 40px 20px;
+   background-color: #e8c04f; /* Yellow background to differentiate this section */
+   color: #4b2707; /* Brown text color */
+   text-align: center;
+}
+
+#testimonials h2 {
+   font-size: 2rem;
+   margin-bottom: 20px;
+}
+
+#testimonials blockquote {
+   font-style: italic;
+   margin: 20px auto;
+   font-size: 1.2rem;
+   max-width: 600px; /* Limit width for better readability */
+}
+
+/* Nearby Attractions Section */
+#nearby-attractions {
+   padding: 40px 20px;
+}
+
+#nearby-attractions h2 {
+   font-size: 2rem;
+   color: #d17f38; /* Orange color for headings */
+   margin-bottom: 20px;
+}
+
+#nearby-attractions ul {
+   list-style-type: none; /* Remove default bullets */
+   padding-left: 0; /* Align with container */
+}
+
+#nearby-attractions ul li::before {
+   content: "✔"; /* Add a checkmark icon before each item */
+   color: #d17f38; 
+   margin-right: 10px; 
+}
+
+#nearby-attractions ul li {
+   font-size: 1rem;
+   margin-bottom: 10px;
+}
+
+/* Call-to-Action (CTA) Section */
+#cta-visit {
+   text-align: center;
+   padding: 40px 20px;
+}
+
+.cta-button {
+   display: inline-block;
+   background-color: #d17f38; /* Orange background for the button */
+   color: #f2f3ee; /* Light cream text color */
+   text-transform: uppercase; 
+   padding: 15px 30px; 
+   border-radius: 5px; 
+   font-weight: bold; 
+   text-decoration: none; 
+}
+
+.cta-button:hover {
+   background-color: #4b2707; /* Dark brown on hover */
+}
+
+/* Navigation Bar Enhancements */
+header nav ul li a.active {
+  color:#4b2707 ;/* Highlight active page link with dark brown*/
+  border-bottom :solid   orange ;
+}
+
+/* Footer Enhancements*/
+footer.main{
+background-color:#4b2707;}
+/* General Enhancements */
+body {
+   background: #f2f3ee;
+   color: #4b2707;
+   font-family: cursive, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+/* Header Navigation */
+header nav ul {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+}
+
+header nav ul li {
+   margin: 0 15px;
+}
+
+header nav ul li a {
+   text-decoration: none;
+   font-weight: bold;
+   color: #4b2707;
+   text-transform: uppercase;
+}
+
+header nav ul li a.active {
+   color: #d17f38; /* Highlight active page link */
+   border-bottom: 2px solid #d17f38; /* Underline for active link */
+}
+
+header nav ul li a:hover {
+   color: #e8c04f; /* Yellow hover effect */
+}
+
+/* Hero Section */
+#hero-order {
+   background-color: #e8c04f; /* Yellow background */
+   text-align: center;
+   padding: 60px 20px;
+}
+
+#hero-order h1 {
+   font-size: 2.5rem;
+   color: #4b2707;
+}
+
+#hero-order p {
+   font-size: 1.2rem;
+}
+
+/* Menu Section */
+#menu-items {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px; /* Space between items */
+}
+
+.menu-item {
+   background-color: #fff; /* White card background */
+   border-radius: 10px; /* Rounded corners */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+   text-align: center;
+   padding: 20px;
+}
+
+.menu-item img {
+   width: 100%;
+   height: auto; /* Maintain aspect ratio */
+   border-radius: 10px; /* Rounded corners for images */
+}
+
+.menu-item h3 {
+   font-size: 1.5rem;
+   color: #d17f38; /* Orange heading color */
+}
+
+.menu-item p {
+   font-size: 1.2rem;
+   margin-bottom: 15px;
+}
+
+.menu-item button {
+   background-color: #d17f38; /* Orange button background */
+   color: #fff; /* White text */
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px; /* Rounded button corners */
+   cursor: pointer;
+}
+
+.menu-item button:hover {
+   background-color: #4b2707; /* Dark brown hover effect */
+}
+
+/* View Cart Button */
+#view-cart {
+   text-align: center;
+   margin-top: 30px;
+}
+
+.cta-button {
+   display: inline-block;
+   background-color: #d17f38; /* Orange button background */
+   color: #fff; /* White text */
+   text-transform: uppercase; 
+   padding: 15px 30px; 
+   border-radius: 5px; 
+   font-weight: bold; 
+   text-decoration: none; 
+}
+
+.cta-button:hover {
+   background-color:#4b2707 ;/* Brown hover effect*/
+}
+
+/* Footer Section */
+footer.main {
+  background-color:#4b2707 ;/* Dark brown footer*/
+  color:#f2f3ee ;/* Light cream text*/
+  padding-top :30 px ;
+  padding-bottom :30 px ;
+}
+footer.main a:hover{
+color:#4b2707;
+}
+/* General Enhancements */
+body {
+   background: #f2f3ee;
+   color: #4b2707;
+   font-family: cursive, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+/* Header Navigation */
+header nav ul {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+}
+
+header nav ul li {
+   margin: 0 15px;
+}
+
+header nav ul li a {
+   text-decoration: none;
+   font-weight: bold;
+   color: #4b2707;
+   text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+   color: #e8c04f; /* Yellow hover effect */
+}
+
+header nav ul li a.active {
+   color: #d17f38; /* Highlight active page link */
+   border-bottom: 2px solid #d17f38; /* Underline for active link */
+}
+
+/* Order Summary Section */
+h1 {
+   font-size: 2.5rem;
+   text-align: center;
+   color: #d17f38; /* Orange heading color */
+}
+
+#cart-items {
+   width: 100%;
+   border-collapse: collapse; /* Remove gaps between table cells */
+   margin-top: 20px;
+}
+
+#cart-items th,
+#cart-items td {
+   border: 1px solid #ddd; /* Light border for table cells */
+   padding: 15px; /* Add padding for better spacing */
+   text-align: center; /* Center-align content */
+}
+
+#cart-items th {
+   background-color: #e8c04f; /* Yellow background for headers */
+   color: #4b2707; /* Brown text color for headers */
+   font-size: 1.2rem;
+}
+
+#cart-items td {
+   font-size: 1rem;
+}
+
+/* Total Price Section */
+#total-price {
+   text-align: right; /* Align total price to the right */
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin-top: 20px;
+}
+
+/* Place Order Button */
+.cta-button,
+#place-order-btn {
+   display: inline-block;
+   background-color: #d17f38; /* Orange button background */
+   color: #fff; /* White text */
+   text-transform: uppercase; 
+   padding: 15px 30px; 
+   border-radius: 5px; 
+   font-weight: bold; 
+   text-decoration: none; 
+}
+
+.cta-button:hover,
+#place-order-btn:hover {
+   background-color:#4b2707 ;/* Brown hover effect*/
+}
+
+/* Responsive Design for Order Summary */
+@media (max-width: 768px) {
+  #cart-items th, 
+  #cart-items td {
+      font-size: 0.9rem; /* Smaller font size on smaller screens */
+      padding: 10px; /* Reduce padding for better fit */
+  }
+
+  h1 {
+      font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
+  #total-price {
+      text-align:center ;/* Center align total price on mobile*/
+}
+}
+/* General Enhancements */
+body {
+   background: linear-gradient(135deg, #f2f3ee, #e8c04f);
+   color: #4b2707;
+   font-family: cursive, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+/* Header Navigation */
+header nav ul {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+}
+
+header nav ul li {
+   margin: 0 15px;
+}
+
+header nav ul li a {
+   text-decoration: none;
+   font-weight: bold;
+   color: #4b2707;
+   text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+   color: #e8c04f; /* Yellow hover effect */
+}
+
+header nav ul li a.active {
+   color: #d17f38; /* Highlight active page link */
+   border-bottom: 2px solid #d17f38; /* Underline for active link */
+}
+
+/* Order Summary Section */
+h1 {
+   font-size: 2.5rem;
+   text-align: center;
+   color: #d17f38; /* Orange heading color */
+}
+
+#cart-items {
+   width: 100%;
+   border-collapse: collapse; /* Remove gaps between table cells */
+   margin-top: 20px;
+   background-color: #fff; /* White background for table */
+   border-radius: 10px; /* Rounded corners */
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Abstracted shadow */
+}
+
+#cart-items th,
+#cart-items td {
+   border-bottom: 1px solid #ddd; /* Light border for table rows */
+   padding: 15px; /* Add padding for better spacing */
+   text-align: center; /* Center-align content */
+}
+
+#cart-items th {
+   background-color: #e8c04f; /* Yellow background for headers */
+   color: #4b2707; /* Brown text color for headers */
+   font-size: 1.2rem;
+}
+
+#cart-items td {
+   font-size: 1rem;
+}
+
+/* Total Price Section */
+#total-price {
+   text-align: right; /* Align total price to the right */
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin-top: 20px;
+}
+
+/* Place Order Button */
+.cta-button,
+#place-order-btn {
+   display: inline-block;
+   background-color: #d17f38; /* Orange button background */
+   color: #fff; /* White text */
+   text-transform: uppercase; 
+   padding: 15px 30px; 
+   border-radius: 5px; 
+   font-weight: bold; 
+   text-decoration: none; 
+}
+
+.cta-button:hover,
+#place-order-btn:hover {
+   background-color:#4b2707 ;/* Brown hover effect*/
+}
+
+/* Abstracted Shadows for Buttons and Containers */
+.cta-button,
+#place-order-btn {
+  box-shadow:
+      0px 4px 6px rgba(0, 0, 0, 0.1),   /* Light shadow at the base */
+      inset -2px -2px 6px rgba(255,255,255,0.5); /* Inner light shadow for depth effect */
+}
+
+/* Responsive Design for Order Summary Section*/
+@media (max-width :768){
+font-size reduced
+
+
+
+
+
+
+
+
+* html .group             { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+footer.main {
+  background-color:#4b2707 ;/* Dark brown footer*/
+  color:#f2f3ee ;/* Light cream text*/
+  padding-top :30 px ;
+  padding-bottom :30 px ;
+}
+footer.main a:hover{
+color:#2c0e80;
+}
+
+
+}
+/* General Button Styling */
+.cta-button,
+#place-order-btn,
+#view-cart .cta-button {
+    display: inline-block;
+    background-color: #d17f38; /* Orange button background */
+    color: #fff; /* White text */
+    text-transform: uppercase; 
+    padding: 15px 30px; 
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; 
+    text-decoration: none; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), /* Outer shadow */
+                inset -2px -2px 6px rgba(255,255,255,0.5); /* Inner light shadow */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.cta-button:hover,
+#place-order-btn:hover,
+#view-cart .cta-button:hover {
+    background-color: #4b2707; /* Dark brown hover effect */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0px 6px 10px rgba(208, 110, 12, 0.2), /* Stronger shadow on hover */
+                inset -1px -1px 4px rgba(255,255,255,0.3); /* Subtle inner shadow */
+}
+
+/* View Cart and Checkout Buttons Specific Styling */
+#view-cart {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#view-cart .cta-button {
+    margin-right: 10px; /* Spacing between buttons if needed */
+}
+
+/* Responsive Design for Buttons */
+@media (max-width: 768px) {
+    .cta-button,
+    #place-order-btn,
+    #view-cart .cta-button {
+        width: 100%; /* Full-width buttons on smaller screens */
+        padding: 12px;
+        font-size: 1rem;
+        margin-bottom: 10px; /* Add spacing between stacked buttons */
+    }
+}
+/* General Styling */
+body {
+   background: linear-gradient(135deg, #f2f3ee, #e8c04f);
+   color: #4b2707;
+   font-family: cursive, sans-serif;
+}
+
+/* Hero Section */
+#hero-contact {
+   background: #d17f38 url('images/contact-hero.jpg') center center no-repeat;
+   background-size: cover;
+   text-align: center;
+   padding: 60px 20px;
+}
+
+#hero-contact h1 {
+   color: #fff;
+   font-size: 2.5rem;
+}
+
+#hero-contact p {
+   color: #fff;
+   font-size: 1.2rem;
+}
+
+/* Contact Form Section */
+#contact-form-section {
+   background-color: #fff;
+   border-radius: 10px;
+   padding: 30px;
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form-section h2 {
+   font-size: 2rem;
+   color: #d17f38;
+}
+
+#contact-form label {
+   display: block;
+   margin-top: 15px;
+   font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+   width: 100%;
+   padding: 10px;
+   margin-top: 5px;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+}
+
+#contact-form button {
+   margin-top: 20px;
+}
+
+/* Contact Details Section */
+#contact-details {
+   margin-top: 40px;
+}
+
+#contact-details h2 {
+   font-size: 2rem;
+}
+
+#social-links {
+   margin-top: 20px;
+}
+
+.social-icon {
+   display: inline-block;
+   margin-right: 10px;
+}
+/* General Styling */
+body {
+   background: linear-gradient(135deg, #f2f3ee, #e8c04f);
+   color: #4b2707;
+   font-family: cursive, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+/* Header Navigation */
+header nav ul {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+}
+
+header nav ul li {
+   margin: 0 15px;
+}
+
+header nav ul li a {
+   text-decoration: none;
+   font-weight: bold;
+   color: #4b2707;
+   text-transform: uppercase;
+   position: relative; /* For underline animation */
+}
+
+header nav ul li a:hover {
+   color: #e8c04f; /* Yellow hover effect */
+}
+
+header nav ul li a.active::after,
+header nav ul li a:hover::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -5px;
+   width: 100%;
+   height: 2px;
+   background-color: #e8c04f; /* Yellow underline */
+   animation: slide-in 0.3s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+   from {
+       width: 0%;
+       opacity: 0.5;
+   }
+   to {
+       width: 100%;
+       opacity: 1;
+   }
+}
+
+/* Hero Section */
+#hero-order {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/order-hero.jpg');
+   background-size: cover;
+   background-position: center center;
+   text-align: center;
+   padding: 60px 20px;
+}
+
+#hero-order h1 {
+   color: #fff;
+   font-size: 3rem;
+   text-transform: uppercase;
+}
+
+#hero-order p {
+   color: #fff;
+   font-size: 1.2rem;
+}
+
+/* Menu Section */
+#menu-items {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px; /* Space between items */
+}
+
+.menu-item {
+   background-color: #fff; /* White card background */
+   border-radius: 10px; /* Rounded corners */
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   text-align: center; /* Center align content */
+   overflow: hidden; /* Hide overflow for hover effect */
+   transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+.menu-item:hover {
+   transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.menu-item img {
+   width: 100%;
+   height: auto; /* Maintain aspect ratio */
+}
+
+.menu-item h3 {
+   font-size: 1.5rem;
+   color: #d17f38; /* Orange heading color */
+}
+
+.menu-item p {
+   font-size: 1.2rem;
+}
+
+.menu-item button {
+   background-color: #d17f38; /* Orange button background */
+   color:#fff ;/* White text*/
+padding :10 px ;
+border-radius :5 px ;
+transition :all .2 s ease
+}
+/* Button Hover Animations */
+.cta-button,
+.menu-item button:hover {
+    transform: scale(1.1); /* Scale the button to 110% of its original size */
+    transition: transform 0.2s ease-in-out; /* Smooth transition effect */
+}
+/* Hero Section */
+#hero-recipes {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/recipes-hero.jpg');
+   background-size: cover;
+   background-position: center;
+   text-align: center;
+   padding: 60px 20px;
+}
+
+#hero-recipes h1 {
+   color: #fff;
+   font-size: 3rem;
+}
+
+#hero-recipes p {
+   color: #fff;
+}
+
+/* Search Bar */
+.search-bar {
+   display: flex;
+   justify-content: center;
+   margin: 20px 0;
+}
+
+#search-bar {
+   width: 60%;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+#surprise-me-btn {
+   margin-left: 10px;
+}
+
+/* Recipe Cards */
+#recipe-cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px; /* Space between cards */
+}
+
+.recipe-card {
+   perspective: 1000px; /* Enable the 3D effect */
+}
+
+.recipe-card .card-front,
+.recipe-card .card-back {
+   width: 100%;
+   height: 300px;
+   border-radius: 10px;
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+   transition: transform 0.6s ease-in-out;
+}
+
+.recipe-card:hover .card-front {
+   transform: rotateY(180deg);
+}
+
+.recipe-card:hover .card-back {
+   transform: rotateY(360deg);
+}
+
+/* Thank You Section */
+#thank-you-section {
+   text-align: center;
+   padding: 60px 20px;
+}
+
+#thank-you-section h1 {
+   font-size: 2.5rem;
+   color: #d17f38; /* Orange color */
+}
+
+#thank-you-section p {
+   font-size: 1.2rem;
+}
+
+/* Cute Animation */
+#thank-you-section {
+   font-size: 3rem;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+   display: inline-block;
+}
+
+
+
+
+

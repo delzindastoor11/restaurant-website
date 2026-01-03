@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Address | DONUT WHOLE</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet4donut.css">
+    <style>
+        .delivery-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .error-message {
+            color: #ff4444;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .order-summary-section {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .order-summary-section h2 {
+            margin-top: 0;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .submit-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        .submit-btn:hover {
+            background: #45a049;
+        }
+
+        .invalid {
+            border-color: #ff4444;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="container">
+        <header class="main">
+            <nav>
+                <ul>
+                    <li><a href="DWweb.html">Home</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="Order_now.html">Order Now</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="delivery-container">
+            <!-- Order Summary Section -->
+            <div class="order-summary-section">
+                <h2>Order Summary</h2>
+                <div id="order-items">
+                    <!-- Dynamically populated -->
+                </div>
+                <div class="summary-item">
+                    <strong>Total:</strong>
+                    <span id="order-total">₹0</span>
+                </div>
+            </div>
+
+            <h1>Delivery Address</h1>
+            <form id="delivery-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" id="name" name="name" required 
+                           pattern="^[a-zA-Z ]{2,50}$">
+                    <div class="error-message">Please enter a valid name (2-50 characters)</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message">Please enter a valid email address</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required 
+                           pattern="^[0-9]{10}$">
+                    <div class="error-message">Please enter a valid 10-digit phone number</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Delivery Address*</label>
+                    <textarea id="address" name="address" rows="4" required 
+                              minlength="10" maxlength="200"></textarea>
+                    <div class="error-message">Please enter a valid address (10-200 characters)</div>
+                </div>
+
+                <button type="submit" class="submit-btn">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main">
+        <div class="container clearfix">
+            <div id="uncopyright">
+                <p>uncopyright &copy; 2025 Delzin Dastoor</p>
+                <p>Please recycle this code responsibly.</p>
+            </div>
+            <div id="credits">
+                <p>Sustainably coded with love by Delzin Rayomand Dastoor.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if cart exists
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+                window.location.href = 'Order_now.html';
+                return;
+            }
+
+            // Populate order summary
+            const orderItems = document.getElementById('order-items');
+            const orderTotal = document.getElementById('order-total');
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'summary-item';
+                itemDiv.innerHTML = `
+                    <span>${item.name} x ${item.quantity}</span>
+                    <span>₹${itemTotal}</span>
+                `;
+                orderItems.appendChild(itemDiv);
+            });
+
+            orderTotal.textContent = `₹${total}`;
+
+            // Form validation
+            const form = document.getElementById('delivery-form');
+            const inputs = form.querySelectorAll('input, textarea');
+
+            inputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    validateInput(input);
+                });
+            });
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                inputs.forEach(input => {
+                    if (!validateInput(input)) {
+                        isValid = false;
+                    }
+                });
+
+                if (isValid) {
+                    // Store delivery info
+                    const deliveryInfo = {
+                        name: form.name.value,
+                        email: form.email.value,
+                        phone: form.phone.value,
+                        address: form.address.value
+                    };
+                    localStorage.setItem('deliveryInfo', JSON.stringify(deliveryInfo));
+
+                    // Create order object
+                    const order = {
+                        items: cart,
+                        total: total,
+                        delivery: deliveryInfo,
+                        orderDate: new Date().toISOString()
+                    };
+                    localStorage.setItem('currentOrder', JSON.stringify(order));
+
+                    // Clear cart and redirect
+                    localStorage.removeItem('cart');
+                    window.location.href = 'thank_you.html';
+                }
+            });
+
+            function validateInput(input) {
+                const errorElement = input.nextElementSibling;
+                let isValid = true;
+
+                if (input.required && !input.value) {
+                    showError(input, errorElement, 'This field is required');
+                    isValid = false;
+                } else if (input.pattern && !new RegExp(input.pattern).test(input.value)) {
+                    showError(input, errorElement, errorElement.textContent);
+                    isValid = false;
+                } else if (input.type === 'email' && !isValidEmail(input.value)) {
+                    showError(input, errorElement, 'Please enter a valid email address');
+                    isValid = false;
+                } else {
+                    hideError(input, errorElement);
+                }
+
+                return isValid;
+            }
+
+            function showError(input, errorElement, message) {
+                input.classList.add('invalid');
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+
+            function hideError(input, errorElement) {
+                input.classList.remove('invalid');
+                errorElement.style.display = 'none';
+            }
+
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* custom css */
+body{
+	background: #4d2d06;
+	font-family: Times;
+	color: #fff;
+	text-align: center;
+	font-size: 50px;
+}
+#monkey{
+	background: #fff;
+	color: burlywood;
+	font-family: arial;
+}
+#donkey{
+	background: #fff;
+	color: black;
+	font-family: georgia;
+}

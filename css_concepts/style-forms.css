@@ -1,0 +1,61 @@
+/*forms*/
+#container
+{
+	width: 500px;
+	margin: 0 auto;
+}
+form
+{
+	background-image: url('images/blue_background.jpg');
+	padding: 20px;
+	font-family: arial;
+}
+form fieldset
+{
+	background-image: url('images/red_background.jpg');
+	padding: 40px;
+	border: solid 1px white;
+}
+form legend
+{
+	border: solid 1px #333;
+	background-color: lightyellow;
+	padding: 5px;
+	font-size: 30px;
+	font-weight: bold;
+}
+form input, form textarea
+{
+	dispaly: block;
+	margin-bottom: 20px;
+}
+form label
+{
+	font-size: 11px;
+	text-transform:uppercase;
+}
+form input[type="text"], form input[type="email"], form textarea
+{
+	padding: 10px;
+	font-size: 20px;
+	font-family: arial;
+	color: slateblue;
+	border: solid 1px beige;
+}
+form textarea
+{
+	width: 300px;
+	height: 100px;
+}
+form input[type="submit"]
+{
+	border: none;
+	background: url('images/button+background.jpg')top left repeat-x;
+	height:40px;
+	padding: 0 20px;
+	border: solid 1px #d4730c;
+	color: white;
+	font-weight: bold;
+	font-family: arial;
+	cursor: pointer;
+}

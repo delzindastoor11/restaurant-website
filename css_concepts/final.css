@@ -1,0 +1,375 @@
+/* ===============================
+   Author: DELZIN RAYOMAND DASTOOR
+   Date: 17-02-2025
+   
+   Colour Palette:
+   ---------------
+   Light Cream:   #f2f3ee
+   Orange:        #d17f38
+   Yellow:        #e8c04f
+   Brown:         #4b2707
+   =============================== */
+
+/* General Styling */
+body {
+    background: #f2f3ee url('images/bg-title.gif') top left repeat;
+    color: #4b2707;
+    font-size: 14px;
+    font-family: cursive ;
+    -webkit-font-smoothing:antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Navigation */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4b2707;
+}
+
+header nav ul li a:hover {
+    color: #d17f38; /* Orange hover effect */
+}
+
+/* Page Titles */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #d17f38; /* Orange heading */
+}
+
+/* Table Styling (Order Summary) */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove gaps between table cells */
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border-bottom: 1px solid #ddd; /* Light border for rows */
+    padding: 10px;
+    text-align: center; /* Center-align content */
+}
+
+table th {
+    background-color: #e8c04f; /* Yellow background for headers */
+}
+
+table tr:hover {
+    background-color: rgba(233, 196, 106, 0.2); /* Highlight row on hover */
+}
+
+/* Total Price Styling */
+h2 {
+    text-align: right; /* Align total price to the right */
+}
+
+/* Form Styling (Delivery Address) */
+form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: 1px solid #ddd; /* Light border */
+}
+
+textarea {
+    resize: none; /* Prevent resizing */
+}
+
+/* Buttons (Place Order & Submit) */
+.cta-button {
+    display: inline-block;
+    background-color: #d17f38; /* Orange button background */
+    color:#fff ;/* White text*/
+padding :10 px ;
+border-radius :5 px ;
+transition :all .2 s ease
+}
+.cta-button:hover {
+    transform: scale(1.1); /* Scale to 110% on hover */
+    background-color: #4b2707; /* Dark brown background on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+/* ===============================
+   Author: DELZIN RAYOMAND DASTOOR
+   Date: 17-02-2025
+   
+   Colour Palette:
+   ---------------
+   Light Cream:   #f2f3ee
+   Orange:        #d17f38
+   Yellow:        #e8c04f
+   Brown:         #4b2707
+   =============================== */
+
+/* General Styling */
+body {
+    background: linear-gradient(135deg, #f2f3ee, #e8c04f);
+    color: #4b2707;
+    font-family: cursive; /* Font style from the example */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Navigation */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4b2707; /* Brown text color */
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #d17f38; /* Orange hover effect */
+}
+
+/* Page Titles */
+h1, h2 {
+    color: #d17f38; /* Orange heading color */
+    font-size: 40px; /* Large font size for headings */
+    font-weight: normal;
+    line-height: 44px;
+    margin-bottom: 20px;
+    font-family: fantasy; /* Fantasy font for headings */
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1 em {
+    font-style: italic;
+    color: #4b2707; /* Brown for emphasized text */
+}
+
+/* Table Styling (Order Summary) */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove gaps between table cells */
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border-bottom: 1px solid #ddd; /* Light border for rows */
+    padding: 10px;
+    text-align: center; /* Center-align content */
+}
+
+table th {
+    background-color: #e8c04f; /* Yellow background for headers */
+}
+
+table tr:hover {
+    background-color: rgba(233, 196, 106, 0.2); /* Highlight row on hover */
+}
+
+/* Total Price Styling */
+h2 {
+    text-align: right; /* Align total price to the right */
+}
+
+/* Form Styling (Delivery Address) */
+form {
+    background-color: #fff; /* White form background */
+    border-radius: 10px; /* Rounded corners for form container */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: 1px solid #ddd; /* Light border for inputs */
+}
+
+textarea {
+    resize: none; /* Prevent resizing of textarea */
+}
+
+/* Buttons (Place Order & Submit) */
+.cta-button {
+    display: inline-block;
+    background-color:#d17f38 ;/*Orange button background */
+}
+/* Order Summary Page */
+#order-summary {
+    background: #f2f3ee;
+    padding: 30px;
+    border: 1px solid #d17f38;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+ }
+ 
+ #order-summary h1 {
+    color: #d17f38;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+ 
+ #order-summary table {
+    width: 100%;
+    border-collapse: collapse;
+ }
+ 
+ #order-summary table th, 
+ #order-summary table td {
+    border: 1px solid #d17f38;
+    padding: 10px;
+    text-align: left;
+ }
+ 
+ #order-summary table th {
+    background-color: #e8c04f;
+    color: #4b2707;
+ }
+ 
+ #order-summary .total {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+ }
+ 
+ .order-actions {
+    text-align: center;
+    margin-top: 20px;
+ }
+ 
+ .order-actions button {
+    background-color: #d17f38;
+    color: #f2f3ee;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+ }
+ 
+ .order-actions button:hover {
+    background-color: #4b2707;
+ }
+/* Delivery Page */
+#delivery-info {
+    background-color: #e8c04f;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 70%;
+ }
+ 
+ #delivery-info h1 {
+    color: #4b2707;
+    font-size: 36px;
+    text-align: center;
+ }
+ 
+ #delivery-info form {
+    margin-top: 20px;
+ }
+ 
+ #delivery-info label {
+    display: block;
+    font-size: 16px;
+    color: #4b2707;
+    margin-bottom: 5px;
+ }
+ 
+ #delivery-info input, 
+ #delivery-info select, 
+ #delivery-info textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #d17f38;
+ }
+ 
+ .delivery-actions {
+    text-align: center;
+ }
+ 
+ .delivery-actions button {
+    background-color: #d17f38;
+    color: #f2f3ee;
+    border-radius: 5px;
+    padding: 10px 20px;
+ }
+  /* Thank You Page */
+#thank-you-message {
+    background-color:#4b2707; 
+    color:#f2f3ee; 
+    padding :40 px;  
+    text-align:center; 
+    border-radius :15 px ; 
+    margin :50 px auto ; 
+    width :60% ;
+}
+  
+h1 ,p{
+font-family: fantasy; }

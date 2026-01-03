@@ -1,0 +1,25 @@
+/*bg images*/
+.bg-ex
+{
+	height: 200px;
+	width: 200px;
+	border: solid 1px black;
+}
+#bg-1 
+{
+	background-image: url('images/blue_background.jpg');
+}
+#bg-2
+{
+	background-color: #a3d;
+}
+#bg-3
+{
+	background-image: url('images/steak_background.jpg');
+	background-repeat:no-repeat ;
+	background-position: center center;
+}
+#bg-4
+{
+	background-image: url('images/skull_background.jpg'); bottom left repeat-x;
+}

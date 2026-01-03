@@ -1,0 +1,130 @@
+/*simple css reset*/
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background: #adb195 ;
+	color: #75480a;
+	font-family: Geneva ;
+	font-size: 14px ;
+}
+#logo
+{
+	display: block;
+	width: 200px;
+	margin: 40px auto;
+	background: none ; /* removes background applied by the a link style */
+}
+#container
+{
+	width: 760px;
+	margin: 0 auto;
+	padding: 40px;
+	background: lightsalmon;
+}
+
+#container:after
+{
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+#main-content
+{
+	width: 500px;
+	float: left;
+}
+#side-bar
+{
+	background: peachpuff;
+	width: 200px;
+	float:left;
+	padding: 20px 20px 0; /* padding adds to the width */
+	margin: 0 0 0 20px;
+}
+#side-bar h3
+{
+	text-transform: capitalize;
+	position: relative;
+	left: -30px;
+	background: url('images/green_background.jpg') top left repeat ;
+	padding: 10px 10px 10px 30px;
+	margin: 0 0 5px;
+	color: lightgoldenrodyellow;
+}
+#side-bar .widget
+{
+	margin: 0 0 20px;
+}
+
+#side-bar a:link
+{
+	margin: 0 0 10px;
+}
+#special-offer
+{
+	position: relative;
+	background: url('images/red_background.jpg') top left repeat;
+	color: white;
+	font-size: 16px;
+	padding: 0  20px 20px;
+	text-transform: capitalize;
+	margin: 30px 0 0;
+}
+#special-offer h2
+{
+	background: grey;
+	font-size: 22px;
+	font-style: italic;
+	text-transform: capitalize;
+	font-weight: bold;
+	display: inline;
+	position: relative;
+	top: -15px;
+	left:-35px ;
+}
+#steak
+{
+	position: absolute;
+	bottom:-20px;
+	right: 10px;
+}
+/* typography */
+
+h1, h2, h3
+{
+	font-family: "Helvetica Rounded" ;
+	font-weight: normal;
+}
+
+h1
+{
+	font-size: 50px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+p.lead
+{
+	font-style: italic;
+	font-family:Helvetica Rounded ;
+	font-size: 18px ;
+	margin: 10px auto;
+}
+address url{
+	link-style:none;
+
+}
+
+a:link{
+	background: #577a1b;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 10px 0 0;
+}

@@ -1,0 +1,54 @@
+code
+{
+	display: block;
+	color: #e96c28;
+	background: white;
+	padding: 5px;
+}
+/*borders*/
+ .border-box
+ {
+ 	background: silver;
+ 	margin: 0 0 15px;
+ 	padding: 20px;
+ 	width: 300px;	/* how wide do we need the box*/
+ }
+ #box-1
+ {
+ 	border: solid 1px black;
+ }
+
+ #box-2
+ {
+ 	border: dashed 1px black;
+ }
+
+ #box-3
+ {
+ 	border: dotted 1px black;
+ }
+
+ #box-4
+ {
+ 	border: double 3px black;
+ }
+
+ #box-5
+ {
+ 	border: solid 4px black;
+ }
+
+ #box-6
+ {
+ 	border: dashed 4px black;
+ }
+
+ #box-7
+ {
+ 	border: dotted 4px black;
+ }
+
+#box-8
+{
+	border: double 6px black;
+} 

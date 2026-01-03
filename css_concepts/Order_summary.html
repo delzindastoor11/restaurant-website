@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Order Summary | DONUT WHOLE</title>
+    <meta name="description" content="Review your order from Donut Whole.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet4donut.css">
+    <style>
+        /* Additional styles for order summary */
+        .cart-container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #cart-items {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        #cart-items th,
+        #cart-items td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #cart-items th {
+            background-color: #f5f5f5;
+        }
+
+        .quantity-btn {
+            padding: 2px 8px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 3px;
+        }
+
+        .quantity-btn:hover {
+            background: #f0f0f0;
+        }
+
+        .remove-btn {
+            padding: 5px 10px;
+            background: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .remove-btn:hover {
+            background: #ff0000;
+        }
+
+        .cart-summary {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .cart-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .continue-shopping {
+            background: #666;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .place-order {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 3rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="container">
+        <header class="main">
+            <nav>
+                <ul>
+                    <li><a href="DWweb.html">Home</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="Order_now.html">Order Now</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Order Summary Section -->
+    <div class="container">
+        <div class="cart-container">
+            <h1>Your Order Summary</h1>
+
+            <!-- Empty cart message (hidden by default) -->
+            <div id="empty-cart-message" class="empty-cart" style="display: none;">
+                <h2>Your cart is empty</h2>
+                <p>Looks like you haven't added any donuts to your cart yet!</p>
+                <a href="Order_now.html" class="continue-shopping">Browse Our Menu</a>
+            </div>
+
+            <!-- Cart Items -->
+            <table id="cart-items">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price (₹)</th>
+                        <th>Quantity</th>
+                        <th>Total (₹)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Items will be dynamically added here -->
+                </tbody>
+            </table>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h2>Order Total: ₹0</h2>
+                <p>Delivery charges will be calculated at checkout</p>
+            </div>
+
+            <!-- Cart Actions -->
+            <div class="cart-actions">
+                <a href="Order_now.html" class="continue-shopping">Continue Shopping</a>
+                <a href="delivery_address.html" class="place-order" id="checkout-btn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main">
+        <div class="container clearfix">
+            <!-- Uncopyright Section -->
+            <div id="uncopyright">
+                <p>uncopyright &copy; 2025 Delzin Dastoor</p>
+                <p>Please recycle this code responsibly.</p>
+            </div>
+
+            <!-- Credits Section -->
+            <div id="credits">
+                <p>Sustainably coded with love by Delzin Rayomand Dastoor.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="cart.js"></script>
+    <script>
+        // Additional page-specific JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            function updateEmptyCartMessage() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const emptyCartMessage = document.getElementById('empty-cart-message');
+                const cartTable = document.getElementById('cart-items');
+                const cartSummary = document.querySelector('.cart-summary');
+                
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                    cartTable.style.display = 'none';
+                    cartSummary.style.display = 'none';
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                    cartTable.style.display = 'table';
+                    cartSummary.style.display = 'block';
+                }
+            }
+
+            // Initialize empty cart message
+            updateEmptyCartMessage();
+
+            // Update empty cart message when cart changes
+            window.addEventListener('storage', updateEmptyCartMessage);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+#container
+{
+	position: relative;
+}
+
+.box
+{
+	background: #db4e4e;
+	color: white;
+	height: 150px;
+	width: 150px;
+	margin: 0 20px 10px;
+}
+#relative-box /* an element moves from where it was before*/
+{
+	position: relative;
+	top: 30px;
+	left: -70px;
+}
+#absolute-box
+{
+	position: absolute; /* reference to the body they move */
+	top: 0;
+	right: 0;
+}

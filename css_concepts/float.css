@@ -1,0 +1,58 @@
+#float
+{
+	background-color: yellow;
+}
+#float #container
+{
+	background-color: floralwhite;
+	padding: 20px;
+} 
+#skull
+{
+	float: left;
+	margin: 0 10px auto;
+}
+#box
+{
+	float: right;
+	
+	height: 100px;
+	width: 80px;
+	background-color: hotpink;
+}
+#main-column
+{
+	background-color: salmon; /*width is added when you do padding*/
+	padding: 28px;
+	color: white;
+	width: 350px;
+	float: right;
+
+}
+#side-bar
+{
+	background-color: lightseagreen;
+	padding: 20px;
+	color: white;
+	width: 50px;
+	float: left;
+}
+.clear
+{
+	clear: both;	
+}
+.clearfix:after
+{
+	content:"";
+	display: table;
+	clear: both;
+}
+
+#footer
+{
+	margin: 10px 10px 10px 10px;
+	clear: both;
+	background-color: black;
+	color: whitesmoke;
+	padding: 10px;
+}
